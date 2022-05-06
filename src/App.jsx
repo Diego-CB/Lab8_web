@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles/App.css'
+import Calculator from './components/Calculator.jsx'
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -11,7 +12,7 @@ const App = () => {
       </header>
       <div className="main-content">
         <div className="calc-container">
-          <h1>aca va la calc</h1>
+          <Calculator />
         </div>
       </div>
     </div>
