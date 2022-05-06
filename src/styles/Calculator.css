@@ -1,5 +1,15 @@
+
 .calculator {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.799);
+  height: 95%;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 6%;
+}
+
+@media (max-width: 470px) {
+  .calculator {
+    width: 95vw;
+    border-radius: 2%;
+    min-width: 300px;
+  }
 }

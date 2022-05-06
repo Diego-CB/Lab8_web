@@ -8,12 +8,12 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Calculadora</h1>
+        <h1>
+          Calculadora
+        </h1>
       </header>
       <div className="main-content">
-        <div className="calc-container">
-          <Calculator />
-        </div>
+        <Calculator />
       </div>
     </div>
   )
