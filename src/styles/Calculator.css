@@ -11,5 +11,7 @@
     width: 95vw;
     border-radius: 2%;
     min-width: 300px;
+    position: relative;
+    right: 0.5%;
   }
 }
