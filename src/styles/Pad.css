@@ -1,0 +1,13 @@
+.pad-container {
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pad {
+    width: 95%;
+    height: 97%;
+
+    background-color: rgba(0, 0, 255, 0.185);
+}
