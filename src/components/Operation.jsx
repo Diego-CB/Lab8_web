@@ -7,12 +7,14 @@ const Operation = ({ stack }) => {
 
   return (
     <div className="operation">
-      {arrayStack.map((char, index) => {
-        if (['+', 'x', '-', '÷'].includes(char)) {
-          return <span key={keys[index]}>{char}</span>
-        }
-        return <p key={keys[index]}>{char}</p>
-      })}
+      <p>
+        {arrayStack.map((char, index) => {
+          if (['+', 'x', '-', '÷'].includes(char)) {
+            return <span key={keys[index]}>{char}</span>
+          }
+          return char
+        })}
+      </p>
     </div>
   )
 }
