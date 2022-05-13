@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Operation from './Operation.jsx'
 import '../styles/Display.css'
 
+// Componente
 const Display = ({ display, stack }) => (
   <>
     <Operation stack={stack} />

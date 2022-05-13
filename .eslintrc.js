@@ -37,5 +37,6 @@ module.exports = {
     'no-console': [1, {
       allow: ['warn', 'error'],
     }],
+    'consistent-return': 0,
   },
 }
