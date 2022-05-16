@@ -30,8 +30,9 @@
 {
     height: 75%;
     width: 80%;
-    border: none;
+    max-height: 110px;
 
+    border: none;
     border-radius: 20%;
     box-shadow: 1px 1.5px 4px 2.2px #3232324e;
 

@@ -7,16 +7,12 @@ const getOperation = index => {
   if (index === 2) return '+'
 }
 
-const handlePress = (buttonIndex, setNewChar) => {
-  console.log('click', getOperation(buttonIndex))
-}
-
 // Componente
 const OperateButton = ({ buttonIndex, setNewChar }) => (
   <div className="button-container">
     <button
       className="pad-operator"
-      onClick={() => handlePress(buttonIndex, setNewChar)}
+      onClick={() => setNewChar(getOperation(buttonIndex))}
       tabIndex={0}
       type="button"
     >

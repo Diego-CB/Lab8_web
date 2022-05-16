@@ -1,16 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const handlePress = setClear => {
-  console.log('click =')
-}
-
 // Componente
 const Clear = ({ setClear }) => (
   <div className="button-container">
     <button
       className="pad-operator pad-clear"
-      onClick={() => handlePress(setClear)}
+      onClick={() => setClear(true)}
       tabIndex={0}
       type="button"
     >

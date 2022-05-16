@@ -8,8 +8,8 @@ import '../styles/Calculator.css'
 
 // Componente
 const Calculator = () => {
-  const [display, setDisplay] = React.useState('1234567891011121314')
-  const [stack, setStack] = React.useState('10-45+12x12')
+  const [display, setDisplay] = React.useState('0')
+  const [stack, setStack] = React.useState('')
   const [newChar, setNewChar] = React.useState('')
   const [op1, setOp1] = React.useState('')
   const [op2, setOp2] = React.useState('')
@@ -20,41 +20,67 @@ const Calculator = () => {
   React.useEffect(() => {
     if (newChar === '') return
 
+    if (stack.split('').includes('=')) {
+      if (['+', '-', 'x'].includes(newChar)) {
+        setOp1(display)
+        setOp2('')
+        setOperation(newChar)
+        setStack(display + newChar)
+        setNewChar('')
+        return
+      }
+      setOp1(newChar)
+      setOp2('')
+      setOperation('')
+      setDisplay(newChar)
+      setStack(newChar)
+      setNewChar('')
+      return
+    }
+
     if (['+', '-', 'x'].includes(newChar)) {
       if (op1 === '') return
       if (operation !== '') return
       setOperation(newChar)
       setStack(stack + newChar)
       setDisplay(newChar)
+      setStack(stack + newChar)
     }
 
     if (operation === '') {
-      setOp1(op1 + newChar)
-      setDisplay(op1)
-    } else {
-      setOp2(op2 + newChar)
-      setDisplay(op2)
+      const newDisplay = op1 + newChar.toString()
+      setOp1(newDisplay)
+      setDisplay(newDisplay)
+      setStack(stack + newChar)
+      return
     }
 
+    const newDisplay = op2 + newChar.toString()
+    setOp2(newDisplay)
+    setDisplay(newDisplay)
     setStack(stack + newChar)
   }, [newChar])
 
   React.useEffect(() => {
+    if (!operate) return
     if (op1 === '' || op2 === '' || operation === '') return
 
     const result = operator(op1, op2, operation)
-    setDisplay(result)
+    setDisplay(result.toString())
+    setStack(stack + '=' + result.toString())
+    setOperate(false)
   }, [operate])
 
   React.useEffect(() => {
     if (!clear) return
 
-    setDisplay('')
+    setDisplay('0')
     setNewChar('')
     setOp1('')
     setOp2('')
-    setStack([])
+    setStack('')
     setOperation('')
+    setClear(false)
   }, [clear])
 
   return (

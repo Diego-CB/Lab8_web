@@ -1,16 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const handlePress = (content, setNewChar) => {
-  console.log('click', content)
-}
-
 // Componente
 const NumberButton = ({ content, setNewChar }) => (
   <div className="button-container">
     <button
       className="pad-button"
-      onClick={() => handlePress(content, setNewChar)}
+      onClick={() => setNewChar(content)}
       tabIndex={0}
       type="button"
     >

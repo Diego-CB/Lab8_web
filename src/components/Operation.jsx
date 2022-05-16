@@ -10,7 +10,7 @@ const Operation = ({ stack }) => {
     <div className="operation">
       <p>
         {arrayStack.map((char, index) => {
-          if (['+', 'x', '-'].includes(char)) {
+          if (['+', 'x', '-', '='].includes(char)) {
             return <span key={keys[index]}>{char}</span>
           }
           return char
