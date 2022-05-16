@@ -15,6 +15,7 @@ const Calculator = () => {
   const [op2, setOp2] = React.useState('')
   const [operation, setOperation] = React.useState('')
   const [operate, setOperate] = React.useState(false)
+  const [clear, setClear] = React.useState(false)
 
   React.useEffect(() => {
     if (newChar === '') return
@@ -45,6 +46,17 @@ const Calculator = () => {
     setDisplay(result)
   }, [operate])
 
+  React.useEffect(() => {
+    if (!clear) return
+
+    setDisplay('')
+    setNewChar('')
+    setOp1('')
+    setOp2('')
+    setStack([])
+    setOperation('')
+  }, [clear])
+
   return (
     <div className="calculator">
       <h2>Calculate</h2>
@@ -55,6 +67,7 @@ const Calculator = () => {
       <Pad
         setOperate={setOperate}
         setNewChar={setNewChar}
+        setClear={setClear}
       />
     </div>
   )
