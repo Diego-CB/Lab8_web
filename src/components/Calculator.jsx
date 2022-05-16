@@ -26,6 +26,7 @@ const Calculator = () => {
         setOp2('')
         setOperation(newChar)
         setStack(display + newChar)
+        setDisplay(newChar)
         setNewChar('')
         return
       }
@@ -44,21 +45,18 @@ const Calculator = () => {
       setOperation(newChar)
       setStack(stack + newChar)
       setDisplay(newChar)
-      setStack(stack + newChar)
-    }
-
-    if (operation === '') {
+    } else if (operation === '') {
       const newDisplay = op1 + newChar.toString()
       setOp1(newDisplay)
       setDisplay(newDisplay)
-      setStack(stack + newChar)
-      return
+    } else {
+      const newDisplay = op2 + newChar.toString()
+      setOp2(newDisplay)
+      setDisplay(newDisplay)
     }
 
-    const newDisplay = op2 + newChar.toString()
-    setOp2(newDisplay)
-    setDisplay(newDisplay)
     setStack(stack + newChar)
+    setNewChar('')
   }, [newChar])
 
   React.useEffect(() => {
@@ -82,6 +80,19 @@ const Calculator = () => {
     setOperation('')
     setClear(false)
   }, [clear])
+
+  React.useEffect(() => {
+    if (display === 'ERROR' || ['+', '-', 'x'].includes(display)) return
+    if (display.length < 10 && parseInt(display, 10) >= 0) return
+
+    console.log('fault:', display)
+
+    setDisplay('ERROR')
+    setOp1('')
+    setOp2('')
+    setStack('')
+    setOperation('')
+  }, [display])
 
   return (
     <div className="calculator">
