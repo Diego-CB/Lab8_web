@@ -61,7 +61,14 @@ const Calculator = () => {
 
   React.useEffect(() => {
     if (!operate) return
-    if (op1 === '' || op2 === '' || operation === '') return
+
+    if (
+      [op1, op2, operation].includes('')
+      || stack.split('').includes('=')
+    ) {
+      setOperate(false)
+      return
+    }
 
     const result = operator(op1, op2, operation)
     setDisplay(result.toString())
