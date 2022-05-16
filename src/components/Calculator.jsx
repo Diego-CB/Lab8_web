@@ -92,8 +92,6 @@ const Calculator = () => {
     if (display === 'ERROR' || ['+', '-', 'x'].includes(display)) return
     if (display.length < 10 && parseInt(display, 10) >= 0) return
 
-    console.log('fault:', display)
-
     setDisplay('ERROR')
     setOp1('')
     setOp2('')
