@@ -1,3 +1,4 @@
 /src/test/**
 /vite.config.js
 /dist/**
+/jest.config.js

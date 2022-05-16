@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Display from './Display.jsx'
-import Pad from './Pad.jsx'
+import Display from './Display'
+import Pad from './Pad'
 
 import operator from '../util/operator'
 import '../styles/Calculator.css'

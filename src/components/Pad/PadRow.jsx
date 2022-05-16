@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import NumberButton from './NumberButton.jsx'
-import OperateButton from './OperateButton.jsx'
+import NumberButton from './NumberButton'
+import OperateButton from './OperateButton'
 
 const getRow = colIndex => {
   if (colIndex === 0) return [0, [7, 8, 9]]

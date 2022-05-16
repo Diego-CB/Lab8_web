@@ -22,9 +22,6 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': 0,
     'linebreak-style': 0,
-    'import/extensions': [2, {
-      jsx: 'always',
-    }],
     'react/function-component-definition': [2, {
       namedComponents: 'arrow-function',
     }],

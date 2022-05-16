@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import PadRow from './Pad/PadRow.jsx'
-import NumberButton from './Pad/NumberButton.jsx'
-import EqualButton from './Pad/EqualButton.jsx'
-import ClearButton from './Pad/ClearButton.jsx'
+import PadRow from './Pad/PadRow'
+import NumberButton from './Pad/NumberButton'
+import EqualButton from './Pad/EqualButton'
+import ClearButton from './Pad/ClearButton'
 
 import '../styles/Pad.css'
 
