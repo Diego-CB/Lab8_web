@@ -13,6 +13,9 @@ const Operation = ({ stack }) => {
           if (['+', 'x', '-', '='].includes(char)) {
             return <span key={keys[index]}>{char}</span>
           }
+          if (['(', ')'].includes(char)) {
+            return <span className="parens" key={keys[index]}>{char}</span>
+          }
           return char
         })}
       </p>

@@ -43,7 +43,7 @@ const Calculator = () => {
       if (op1 === '') return
       if (![op1, op2, operation].includes('')) {
         const result = operator(op1, op2, operation)
-        setStack(stack + newChar)
+        setStack('(' + stack + ')' + newChar)
         setDisplay(newChar)
         setOp1(result.toString())
         setOperation(newChar)

@@ -32,6 +32,11 @@
     font-size: 20px;
 }
 
+.operation .parens{
+    color: rgb(85, 118, 160);
+    font-size: 20px;
+}
+
 .calculator h3{
     padding-right: 4.5%;
     font-size: 38px;
