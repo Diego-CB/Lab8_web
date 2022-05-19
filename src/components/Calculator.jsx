@@ -41,6 +41,16 @@ const Calculator = () => {
 
     if (['+', '-', 'x'].includes(newChar)) {
       if (op1 === '') return
+      if (![op1, op2, operation].includes('')) {
+        const result = operator(op1, op2, operation)
+        setStack(stack + newChar)
+        setDisplay(newChar)
+        setOp1(result.toString())
+        setOperation(newChar)
+        setOp2('')
+        setNewChar('')
+        return
+      }
       if (operation !== '') return
       setOperation(newChar)
       setStack(stack + newChar)
