@@ -78,3 +78,28 @@ describe('When an operation with negative result is typed', () => {
     ).toBe('ERROR')
   })
 })
+
+describe('When an operation is typed after an operation', () => {
+  it('calculates the operation and shows the result', async () => {
+    render(<Calculator />)
+    
+    const display = (await screen.findAllByText(/0/))[0]
+    const button5 = await screen.findByText(/5/)
+    const button7 = await screen.findByText(/7/)
+    const less = await screen.findByText(/-/)
+    const mult = await screen.findByText(/x/)
+    const equal = await screen.findByText(/=/)
+  
+    // Simulacion de operacion: (5x5)-7
+    await userEvent.click(button5)
+    await userEvent.click(mult)
+    await userEvent.click(button5)
+    await userEvent.click(less)
+    await userEvent.click(button7)
+    await userEvent.click(equal)
+
+    expect(
+      display.innerHTML
+    ).toBe('18')
+  })
+})
