@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Operation from './Operation'
-import '../styles/Display.css'
+import '../styles/Display.scss'
 
 // Componente
 const Display = ({ display, stack }) => (
