@@ -1,17 +1,17 @@
 # Lab8_web
-Laboratorio 8 - Calculadora basica hecha con tecnologias web
+Laboratorio 8 - Calculadora básica hecha con tecnologias web
 
 ## Tecnologias utilizadas
 
 En este proyecto se implementan las siguientes tecnologías.
 
-- ⚛ **React** -- Desarrollo de Componentes con JSX
-- 💎**css** -- Estilo de componentes
-- 🕹 **scss** --Pre procesado de css 
-- 🗃 **Yarn** -- package manager
-- ⚒ **Vite** -- module bundler
-- ✔ **ESlint** -- lint con stándares de Airbnb 
-- 🧪 **Jest** -- Pruebas de componentes
+- ⚛ **React** — Desarrollo de Componentes con JSX.
+- 💎**css** — Estilo de componentes.
+- 🕹 **scss** — Stylesheet para css.
+- 🗃 **Yarn** — package manager.
+- ⚒ **Vite** — module bundler.
+- ✔ **ESlint** — lint con stándares de Airbnb .
+- 🧪 **Jest** — Pruebas de componentes.
 
 ## Getting Started
 
@@ -21,10 +21,10 @@ En este proyecto se implementan las siguientes tecnologías.
 
 ## Comandos
 
-- `yarn dev` -- Dev server para desarrollo
-- `yarn build` -- Crea build de produccion en la carpeta `dist`
-- `yarn lint` -- Realizar prueba de lintin
-- `yarn test` -- Realiza las pruebas definidas utiliando jest 
+- `yarn dev` — Dev server para desarrollo.
+- `yarn build` — Crea build de produccion en la carpeta `dist`.
+- `yarn lint` — Realizar prueba de lint.
+- `yarn test` — Realiza las pruebas definidas utiliando jest.
 
 ## Autor
 Diego Córdova.
