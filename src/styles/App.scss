@@ -36,7 +36,7 @@ $end-gradient: rgba(9,214,252,0.4795051809786415);
     height: 100%;
     
     h1 {
-      rotate: -90deg;
+      transform: rotateZ(-90deg);
       width: fit-content;
       height: fit-content;
     }
