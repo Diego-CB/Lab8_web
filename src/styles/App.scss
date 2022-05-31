@@ -52,14 +52,19 @@ $end-gradient: rgba(9,214,252,0.4795051809786415);
 }
 
 @media (max-width: 716px) {
-  .App-header {
-    font-size: 0;
-    width: 0;
-    height: 0;
-  }
-
-  .App-header, .main-content {
-    position: relative;
-    right: 0;
+  .App {
+    .App-header {
+      background-color: red;
+  
+      h1 {
+        font-size: 0;
+        width: 0;
+        height: 0;
+      }
+    }
+  
+    .main-content {
+      right: 0;
+    }
   }
 }
